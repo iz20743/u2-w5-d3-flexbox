@@ -1,0 +1,115 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        h1 {
+            text-align: right;
+        }
+
+        
+
+        .box {
+            /* height: 100px; */
+            width: 100px;
+            /* float: left; */
+        }
+
+        .antique {
+            background-color: antiquewhite;
+        }
+
+        .aquamarine {
+            background-color: aquamarine;
+        }
+
+        .coral {
+            background-color: coral;
+        }
+
+        .crimson {
+            background-color: crimson;
+        }
+
+        .flex-container {
+            display: flex;
+            background-color: #f8f8f8
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+            background-color: powderblue;
+            min-height: 60px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .flex-container {
+            flex-grow: 1;
+        }
+
+        .flex-container>*:first-child {
+            flex-basis: 300px;
+            flex-shrink: 5;
+        }
+
+        .flex-container>*:nth-child(2) {
+            flex-basis: 600px;
+            flex-grow: 1;
+        }
+
+
+        @media (max-width: 367px) {
+            nav ul {
+                padding-left: 0;
+                padding-block: 2rem;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+   
+
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li>item-1</li>
+                <li>item-2</li>
+                <li>item-3</li>
+                <li>item-4</li>
+                <li>item-5</li>
+            </ul>
+        </nav>
+
+        <div class="flex-container">
+            <div class="box aquamarine"></div>
+            <div class="box coral"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
